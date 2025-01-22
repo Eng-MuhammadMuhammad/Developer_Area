@@ -1,0 +1,87 @@
+.features {
+  padding: 80px 20px; /* Adjust padding for better responsiveness */
+}
+
+.features h2 {
+  font-weight: bold;
+  font-size: 40px;
+  color: var(--main-color);
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Add gap between the feature boxes */
+}
+
+.featBox {
+  width: 100%;
+  max-width: 350px; /* Set max width to maintain consistency */
+  text-align: center;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.featBox img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px; /* Added margin between image and title */
+}
+
+.featBox h4 {
+  font-size: 20px;
+  margin: 15px 0 20px;
+  position: relative;
+}
+
+.featBox h4::before {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background-color: #03a9f4;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -18px;
+}
+
+.featBox p {
+  width: 90%;
+  font-size: 14px;
+  margin: 0 auto 20px;
+  color: rgb(138, 138, 138);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .featBox {
+    width: 45%;
+  }
+}
+
+@media (max-width: 991px) {
+  .featBox {
+    width: 45%; /* Adjust to 45% width on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .featBox {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .featBox {
+    width: 100%;
+  }
+  .features h2 {
+    font-size: 30px; /* Smaller heading on small screens */
+  }
+  .featBox p {
+    font-size: 12px; /* Reduce font size for smaller screens */
+  }
+}

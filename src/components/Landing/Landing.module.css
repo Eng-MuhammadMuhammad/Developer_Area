@@ -1,0 +1,181 @@
+/* Start Landing Page */
+.landingPage {
+  min-height: 100vh;
+  background-image: url(../../imgs/01.jpg);
+  background-size: cover;
+  position: relative;
+  background-position: center; /* Center the background image */
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.75);
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 1000;
+  padding-left: 50px; /* Adjust padding to avoid the menu being too far left */
+  padding-right: 50px; /* Same for right padding */
+  display: flex;
+  justify-content: space-between; /* Aligns content in the header */
+  align-items: center; /* Vertically aligns logo and links */
+}
+
+.headerArea {
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Ensures the logo and menu are spaced properly */
+  width: 100%;
+}
+
+.logo {
+  width: 100px;
+  padding: 15px;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: flex-end; /* Ensures the links are aligned to the right */
+  align-items: center;
+  flex-grow: 1; /* Allows for flexible growth of links */
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Change to flexbox for better mobile alignment */
+}
+
+.links li {
+  margin-left: 20px; /* Adjust spacing between links */
+}
+
+.links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px; /* Slightly smaller text for better spacing */
+}
+
+.links li a:hover,
+.links li a.active {
+  color: var(--main-color);
+}
+
+.toggleMenu {
+  background: none;
+  border: none;
+  width: 40px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  position: relative;
+}
+
+.toggleMenu span {
+  height: 3px;
+  display: block;
+  background-color: #fff;
+  margin-bottom: 4px;
+}
+
+/* Introduction Text */
+.introductionText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  text-align: -webkit-center;
+  width: 100%; /* Make the width smaller for better responsiveness */
+}
+
+.introductionText h1 {
+  font-size: 40px;
+  margin: 0 0 20px 0;
+}
+
+@media (max-width: 575px) {
+  .introductionText h1 {
+    font-size: 28px;
+  }
+}
+
+.introductionText h1 span {
+  color: var(--main-color);
+}
+
+.introductionText p {
+  line-height: 1.5;
+  font-size: 17px;
+  margin: 20px;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Mobile Menu */
+@media (max-width: 991px) {
+  .container {
+    padding-left: 20px;  /* Reduce padding for mobile */
+    padding-right: 20px;  /* Reduce padding for mobile */
+  }
+
+  .logo {
+    width: 80px;  /* Resize logo for mobile */
+    padding: 10px;  /* Adjust padding */
+  }
+
+  .links {
+    display: none;  /* Hide links by default */
+    background-color: rgba(0, 0, 0, 0.85); /* Add a dark background behind the mobile links */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .links.open {
+    display: block; /* Show links when the menu is active */
+  }
+
+  .links.open li {
+    display: block;
+    padding: 10px;
+    font-size: 18px; /* Larger text for mobile */
+  }
+
+  .toggleMenu {
+    display: inline-block; /* Ensure toggle button is visible */
+  }
+
+  /* Adjust Introduction Text */
+  .introductionText {
+    width: 100%;
+    margin: 0 10px;
+ 
+  }
+
+  .introductionText h1 {
+    font-size: 30px; /* Slightly smaller font on mobile */
+  }
+
+  .introductionText p {
+    font-size: 15px;  /* Adjust font size for smaller screens */
+    margin: 10px;
+    max-width: 100%;  /* Avoid text overflow */
+  }
+}
+
+/* End Landing Page */

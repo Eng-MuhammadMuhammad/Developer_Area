@@ -1,0 +1,79 @@
+/* Start About Us */
+.container {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.aboutUs {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: space-between; /* Add spacing between items */
+}
+
+.infoBox {
+  flex: 1;
+  padding: 15px;
+  padding-left: 100px;
+  box-sizing: border-box;
+}
+
+.infoBox h2 {
+  font-weight: bold;
+  font-size: 40px;
+  color: var(--main-color);
+  margin: 0 0 10px;
+}
+
+.infoBox p {
+  line-height: 2;
+  color: #777;
+  margin: 0;
+}
+
+.imageBox {
+  flex: 1;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 250px;
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .aboutUs {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 80px;
+  }
+
+  .infoBox {
+    padding-left: 0;
+    margin-bottom: 20px; /* Add space between text and image */
+  }
+
+  .infoBox h2 {
+    font-size: 32px; /* Make the header text smaller on mobile */
+  }
+
+  .infoBox p {
+    font-size: 14px; /* Reduce font size for readability */
+    margin-top: 10px; /* Add space above the paragraph */
+  }
+
+  .imageBox {
+    text-align: center; /* Center the image */
+  }
+
+  .image {
+    width: 200px; /* Reduce the image size on smaller screens */
+  }
+}
+/* End About Us */
